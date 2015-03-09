@@ -34,3 +34,9 @@ D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pd
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache

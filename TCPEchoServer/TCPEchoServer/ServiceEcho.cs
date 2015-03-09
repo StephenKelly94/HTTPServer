@@ -10,17 +10,17 @@ namespace TCPEchoServer
 {
     internal class ServiceEcho
     {
-        private readonly List<EchoService> echoServices = new List<EchoService>();
-        private readonly TcpListener serverSocket;
+        private readonly List<EchoService> _echoServices = new List<EchoService>();
+        private readonly TcpListener _serverSocket;
 
         public ServiceEcho()
         {
-            serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 80); //65080
+            _serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 80); //65080
         }
 
-        public void run()
+        public void Run()
         {
-            serverSocket.Start();
+            _serverSocket.Start();
 
             var checkThread = new Thread(CheckConnections);
             checkThread.Start();
@@ -28,14 +28,14 @@ namespace TCPEchoServer
             while (true)
             {
                 Console.WriteLine("Waiting for a new client...");
-                var connectionSocket = serverSocket.AcceptTcpClient();
+                var connectionSocket = _serverSocket.AcceptTcpClient();
 
                 Console.WriteLine("Server activated");
 
                 try
                 {
                     var echoService = new EchoService(connectionSocket);
-                    echoServices.Add(echoService);
+                    _echoServices.Add(echoService);
                     var thread = new Thread(echoService.DoIt);
                     thread.Start();
 // OR A FACTORY
@@ -51,7 +51,7 @@ namespace TCPEchoServer
                 }
             }
 
-            serverSocket.Stop();
+            _serverSocket.Stop();
         }
 
         public void CheckConnections()
@@ -59,17 +59,17 @@ namespace TCPEchoServer
             while (true)
             {
                 var echoServicesRemove = new List<EchoService>();
-                foreach (var echoService in echoServices)
+                foreach (var echoService in _echoServices)
                 {
                     if (echoService.ConnectionSocket.Connected == false)
                     {
-                        Console.WriteLine("Client " + echoService.clientNumber + " closed.");
+                        Console.WriteLine("Client " + echoService.ClientNumber + " closed.");
                         echoServicesRemove.Add(echoService);
                     }
                 }
                 foreach (var echoService in echoServicesRemove)
                 {
-                    echoServices.Remove(echoService);
+                    _echoServices.Remove(echoService);
                 }
                 Thread.Sleep(100);
             }
