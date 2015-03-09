@@ -56,6 +56,13 @@ namespace TCPEchoServer
             }catch(FileNotFoundException e)
             {
                 Console.WriteLine("File {0} not found", e.FileName);
+                sw.Write("http/1.0 404 Not Found\r\n\r\n");
+                FileStream fileStream = new FileStream(RootCatalog + "/404.html", FileMode.Open);
+                StreamReader fileStreamReader = new StreamReader(fileStream);
+                fileStream.CopyTo(sw.BaseStream);
+                fileStreamReader.Close();
+                fileStream.Close();
+
             }
             
         }
