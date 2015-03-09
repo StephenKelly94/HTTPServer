@@ -13,6 +13,7 @@ namespace TCPEchoServer
     {
         private readonly List<EchoService> _echoServices = new List<EchoService>();
         private readonly TcpListener _serverSocket;
+        private bool _isRunning = true;
 
         public ServiceEcho()
         {
@@ -23,18 +24,19 @@ namespace TCPEchoServer
         {
             _serverSocket.Start();
 
+            //Wait for closing...
+            Task.Run(new Action(WaitForEnter));
+
             var checkThread = new Thread(CheckConnections);
             checkThread.Start();
 
-            while (true)
+            while (_isRunning)
             {
-                Console.WriteLine("Waiting for a new client...");
-                var connectionSocket = _serverSocket.AcceptTcpClient();
-
-                Console.WriteLine("Server activated");
-
                 try
                 {
+                    Console.WriteLine("Waiting for a new client...");
+                    var connectionSocket = _serverSocket.AcceptTcpClient();
+                    Console.WriteLine("Server activated");
                     EchoService echoService = new EchoService(connectionSocket);
                     _echoServices.Add(echoService);
 //                    Thread thread = new Thread(echoService.DoIt);
@@ -56,9 +58,16 @@ namespace TCPEchoServer
             _serverSocket.Stop();
         }
 
+        public void WaitForEnter()
+        {
+            Console.ReadLine();
+            _isRunning = false;
+            _serverSocket.Server.Close();
+        }
+
         public void CheckConnections()
         {
-            while (true)
+            while (_isRunning)
             {
                 List<EchoService> echoServicesRemove = new List<EchoService>();
                 foreach (var echoService in _echoServices)

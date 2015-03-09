@@ -66,8 +66,7 @@ namespace TCPEchoServer
                 fileStreamReader.Close();
                 fileStream.Close();
 
-            }
-            
+            }   
         }
     }
 }
