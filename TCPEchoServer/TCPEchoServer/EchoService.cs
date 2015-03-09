@@ -49,7 +49,10 @@ namespace TCPEchoServer
             {
                 FileStream fileStream = new FileStream(RootCatalog + fileName, FileMode.Open);
                 StreamReader fileStreamReader = new StreamReader(fileStream);
-                sw.Write("http/1.0 200 OK \r\n\r\n");
+                sw.Write("http/1.0 200 OK \r\n");
+                ContentTypes contentTypes = new ContentTypes();
+                sw.Write("Content-Type: " + contentTypes.GetContentType(Path.GetExtension(fileName)) + "\r\n");
+                sw.Write("Content-Length: " + fileStream.Length + "\r\n\r\n");
                 fileStream.CopyTo(sw.BaseStream);
                 fileStreamReader.Close();
                 fileStream.Close();
