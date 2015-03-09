@@ -2,56 +2,41 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace TCPEchoServer
 {
-    class ServiceEcho
+    internal class ServiceEcho
     {
-        private TcpListener serverSocket;
-        private List<EchoService> echoServices = new List<EchoService>();
+        private readonly List<EchoService> echoServices = new List<EchoService>();
+        private readonly TcpListener serverSocket;
+
         public ServiceEcho()
         {
-            //serverSocket = new TcpListener(65080);
-            //serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 65080);
-            serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 80);
-
-            
+            serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 80); //65080
         }
 
         public void run()
         {
             serverSocket.Start();
 
-            Thread checkThread = new Thread(CheckConnections);
+            var checkThread = new Thread(CheckConnections);
             checkThread.Start();
 
             while (true)
             {
-//                IPAddress[] ipAddresses = Dns.GetHostEntry("localhost").AddressList;
-//                string addresses = "";
-//                foreach (IPAddress ipAddress in ipAddresses)
-//                {
-//                    addresses = String.Join(", ", addresses, ipAddress.ToString());
-//                }
-//                Console.WriteLine("address list:\n" + addresses + "------\n");
-
                 Console.WriteLine("Waiting for a new client...");
-                TcpClient connectionSocket = serverSocket.AcceptTcpClient();
-                
-                //Socket connectionSocket = serverSocket.AcceptSocket();
+                var connectionSocket = serverSocket.AcceptTcpClient();
+
                 Console.WriteLine("Server activated");
 
                 try
                 {
-                    EchoService echoService = new EchoService(connectionSocket);
+                    var echoService = new EchoService(connectionSocket);
                     echoServices.Add(echoService);
-                    Thread thread = new Thread(echoService.DoIt);
+                    var thread = new Thread(echoService.DoIt);
                     thread.Start();
 // OR A FACTORY
 //                    Task.Factory.StartNew(echoService.DoIt);
@@ -64,11 +49,6 @@ namespace TCPEchoServer
                 {
                     Debug.Write(ioException.StackTrace);
                 }
-
-                // Managing closing clients in a thread
-                //                connectionSocket.Close();
-                //                Console.WriteLine("Client Closed.");
-                //                Console.WriteLine
             }
 
             serverSocket.Stop();
@@ -78,8 +58,8 @@ namespace TCPEchoServer
         {
             while (true)
             {
-                List<EchoService> echoServicesRemove = new List<EchoService>();
-                foreach (EchoService echoService in echoServices)
+                var echoServicesRemove = new List<EchoService>();
+                foreach (var echoService in echoServices)
                 {
                     if (echoService.ConnectionSocket.Connected == false)
                     {
@@ -87,7 +67,7 @@ namespace TCPEchoServer
                         echoServicesRemove.Add(echoService);
                     }
                 }
-                foreach (EchoService echoService in echoServicesRemove)
+                foreach (var echoService in echoServicesRemove)
                 {
                     echoServices.Remove(echoService);
                 }
