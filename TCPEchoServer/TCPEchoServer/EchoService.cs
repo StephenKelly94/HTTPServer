@@ -69,8 +69,6 @@ namespace TCPEchoServer
             fileStream.CopyTo(sw.BaseStream);
             fileStreamReader.Close();
             fileStream.Close();
-            //String lastLine = fileStreamReader.ReadToEnd();
-            //sw.WriteLine(lastLine);
         }
     }
 }
