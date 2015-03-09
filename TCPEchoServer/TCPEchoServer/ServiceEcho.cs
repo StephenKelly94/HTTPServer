@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace TCPEchoServer
 {
@@ -34,12 +35,13 @@ namespace TCPEchoServer
 
                 try
                 {
-                    var echoService = new EchoService(connectionSocket);
+                    EchoService echoService = new EchoService(connectionSocket);
                     _echoServices.Add(echoService);
-                    var thread = new Thread(echoService.DoIt);
-                    thread.Start();
+//                    Thread thread = new Thread(echoService.DoIt);
+//                    thread.Start();
 // OR A FACTORY
 //                    Task.Factory.StartNew(echoService.DoIt);
+                    Task.Run(new Action(echoService.DoIt));
                 }
                 catch (SocketException socketException)
                 {
@@ -58,7 +60,7 @@ namespace TCPEchoServer
         {
             while (true)
             {
-                var echoServicesRemove = new List<EchoService>();
+                List<EchoService> echoServicesRemove = new List<EchoService>();
                 foreach (var echoService in _echoServices)
                 {
                     if (echoService.ConnectionSocket.Connected == false)
@@ -67,7 +69,7 @@ namespace TCPEchoServer
                         echoServicesRemove.Add(echoService);
                     }
                 }
-                foreach (var echoService in echoServicesRemove)
+                foreach (EchoService echoService in echoServicesRemove)
                 {
                     _echoServices.Remove(echoService);
                 }

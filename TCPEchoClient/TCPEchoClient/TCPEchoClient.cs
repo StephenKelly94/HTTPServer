@@ -27,7 +27,7 @@ namespace TCPEchoClient
             Console.WriteLine("Press enter to start connecting to server");
             Console.ReadLine();
             //TcpClient clientSocket = new TcpClient("172.20.10.2", 65080);
-            TcpClient clientSocket = new TcpClient("localhost", 65080);
+            TcpClient clientSocket = new TcpClient("localhost", 80);
 
             Stream ns = clientSocket.GetStream();  //provides a Stream
             StreamReader sr = new StreamReader(ns);

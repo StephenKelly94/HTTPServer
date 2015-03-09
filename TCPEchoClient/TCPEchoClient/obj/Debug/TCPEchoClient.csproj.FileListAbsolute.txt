@@ -25,3 +25,9 @@ D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoClient\TCPEchoClient\obj\Debug
 D:\Mokslai\CODS\Week 10\TCPEchoClient\TCPEchoClient\bin\Debug\TCPEchoClient.exe.config
 D:\Mokslai\CODS\Week 10\TCPEchoClient\TCPEchoClient\obj\Debug\TCPEchoClient.exe
 D:\Mokslai\CODS\Week 10\TCPEchoClient\TCPEchoClient\obj\Debug\TCPEchoClient.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\bin\Debug\TCPEchoClient.exe.config
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\obj\Debug\TCPEchoClient.exe
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\obj\Debug\TCPEchoClient.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\bin\Debug\TCPEchoClient.exe
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\bin\Debug\TCPEchoClient.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoClient\TCPEchoClient\obj\Debug\TCPEchoClient.csprojResolveAssemblyReference.cache
