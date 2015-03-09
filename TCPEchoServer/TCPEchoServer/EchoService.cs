@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 
@@ -50,6 +51,7 @@ namespace TCPEchoServer
                 FileStream fileStream = new FileStream(RootCatalog + fileName, FileMode.Open);
                 StreamReader fileStreamReader = new StreamReader(fileStream);
                 sw.Write("http/1.0 200 OK \r\n");
+                sw.Write("Date: {0} \r\n", string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now));
                 ContentTypes contentTypes = new ContentTypes();
                 sw.Write("Content-Type: " + contentTypes.GetContentType(Path.GetExtension(fileName)) + "\r\n");
                 sw.Write("Content-Length: " + fileStream.Length + "\r\n\r\n");

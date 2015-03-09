@@ -16,8 +16,8 @@ namespace TCPEchoServer
 
         public static void Main(string[] args)
         {
-            ServiceEcho serviceEcho = new ServiceEcho();
-            serviceEcho.Run();
+            ServiceStart serviceStart = new ServiceStart();
+            serviceStart.Run();
         }
     }
     
