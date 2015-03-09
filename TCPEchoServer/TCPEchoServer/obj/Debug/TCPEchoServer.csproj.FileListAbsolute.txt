@@ -1,0 +1,36 @@
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+C:\D Drive\Undervisning\CodsC#\Solutions\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+C:\Users\P\Desktop\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 8 EXCER\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 9\TCPEchoServerClient\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS\Week 10\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe.config
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
