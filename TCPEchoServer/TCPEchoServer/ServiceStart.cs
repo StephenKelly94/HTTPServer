@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TCPEchoServer
 {
-    internal class ServiceStart
+    public class ServiceStart
     {
         private readonly List<EchoService> _echoServices = new List<EchoService>();
         private readonly TcpListener _serverSocket;
@@ -61,6 +61,12 @@ namespace TCPEchoServer
         public void WaitForEnter()
         {
             Console.ReadLine();
+            _isRunning = false;
+            _serverSocket.Server.Close();
+        }
+
+        public void Kill()
+        {
             _isRunning = false;
             _serverSocket.Server.Close();
         }

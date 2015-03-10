@@ -5,7 +5,7 @@ using System.Net.Sockets;
 
 namespace TCPEchoServer
 {
-    internal class EchoService
+    public class EchoService
     {
         private static int _newestClientNumber;
         private const string RootCatalog = "../../../../RootFolder";
@@ -50,7 +50,7 @@ namespace TCPEchoServer
             {
                 FileStream fileStream = new FileStream(RootCatalog + fileName, FileMode.Open);
                 StreamReader fileStreamReader = new StreamReader(fileStream);
-                sw.Write("http/1.0 200 OK \r\n");
+                sw.Write("HTTP/1.0 200 OK\r\n");
                 sw.Write("Date: {0} \r\n", string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now));
                 ContentTypes contentTypes = new ContentTypes();
                 sw.Write("Content-Type: " + contentTypes.GetContentType(Path.GetExtension(fileName)) + "\r\n");
@@ -61,7 +61,7 @@ namespace TCPEchoServer
             }catch(FileNotFoundException e)
             {
                 Console.WriteLine("File {0} not found", e.FileName);
-                sw.Write("http/1.0 404 Not Found\r\n\r\n");
+                sw.Write("HTTP/1.0 404 Not Found\r\n\r\n");
                 FileStream fileStream = new FileStream(RootCatalog + "/404.html", FileMode.Open);
                 StreamReader fileStreamReader = new StreamReader(fileStream);
                 fileStream.CopyTo(sw.BaseStream);

@@ -1,0 +1,7 @@
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\bin\Debug\HTTPServerTest.dll
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\bin\Debug\HTTPServerTest.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\bin\Debug\TCPEchoServer.exe
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\bin\Debug\TCPEchoServer.pdb
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.dll
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.pdb

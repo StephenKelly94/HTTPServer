@@ -34,7 +34,7 @@ namespace TCPEchoClient
             StreamWriter sw = new StreamWriter(ns);
             sw.AutoFlush = true; // enable automatic flushing
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 1; i++)
             {
                 //Console.WriteLine(i + ". Write a message to server:");
                 //string message = Console.ReadLine();
@@ -46,6 +46,10 @@ namespace TCPEchoClient
                     message = message + (char)(newChar);
                 }
                 Console.WriteLine("I am sending: " + message);
+
+                //TEST
+                message = "GET /file.txt HTTP/1.1\r\n\r\n";
+
                 sw.WriteLine(message);
                 string serverAnswer = sr.ReadLine();
                 Console.WriteLine("Server replied: " + serverAnswer);
