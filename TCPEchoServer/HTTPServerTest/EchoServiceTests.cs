@@ -19,7 +19,7 @@ namespace HTTPServer.Tests
     [TestClass()]
     public class EchoServiceTests
     {
-        private  ServiceStart serviceStart;
+        private  ServerStart serviceStart;
         private  TcpClient clientSocket;
         private  Stream ns;
         private  StreamReader sr;
@@ -28,7 +28,7 @@ namespace HTTPServer.Tests
         [TestInitialize]
         public void InitClass() //TestContext context
         {
-            serviceStart = new ServiceStart();
+            serviceStart = new ServerStart();
             Thread thread = new Thread(serviceStart.Run);
             thread.Start();
 

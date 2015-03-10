@@ -51,7 +51,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="EchoServiceTests.cs" />
-    <Compile Include="ServiceStartTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

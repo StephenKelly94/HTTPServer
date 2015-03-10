@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentTypes.cs" />
-    <Compile Include="EchoService.cs" />
+    <Compile Include="ServerThread.cs" />
+    <Compile Include="HandlingRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceStart.cs" />
-    <Compile Include="TCPEchoServer.cs" />
+    <Compile Include="ReadingRequest.cs" />
+    <Compile Include="SendingResponse.cs" />
+    <Compile Include="ServerStart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
