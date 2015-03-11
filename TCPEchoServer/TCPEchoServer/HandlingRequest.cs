@@ -15,7 +15,19 @@ namespace TCPEchoServer
             if (request.FilePath == "/")
             {
                 String indexString = "/index.html";
-                FileStream fileStream = new FileStream(ServerStart.RootCatalog + indexString, FileMode.Open);
+                FileStream fileStream;
+                try
+                {
+                    fileStream = new FileStream(ServerStart.RootCatalog + indexString, FileMode.Open);
+                }
+                catch (FileNotFoundException)
+                {
+                    Console.WriteLine("INVALID ROOT FOLDER");
+                    Console.WriteLine("CHANGING TO DEFAULT:");
+                    ServerStart.RootCatalog = ServerStart.DefaultRootCatalog;
+                    Console.WriteLine(ServerStart.DefaultRootCatalog);
+                    fileStream = new FileStream(ServerStart.RootCatalog + indexString, FileMode.Open);
+                }
                 ContentTypes contentTypes = new ContentTypes();
                 response = new HTTPResponse("HTTP/1.0 200 OK\r\n",
                     "Date: " + string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now) + "\r\n",

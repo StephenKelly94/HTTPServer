@@ -14,17 +14,22 @@ namespace TCPEchoServer
         private readonly List<ServerThread> _echoServices = new List<ServerThread>();
         private readonly TcpListener _serverSocket;
         private bool _isRunning = true;
-        public const string RootCatalog = "../../../../RootFolder";
+        public static string RootCatalog = "../../../../RootFolder";
+        public static string DefaultRootCatalog = "../../../../RootFolder";
+        private int port = 80;
 
         public static void Main(string[] args)
         {
             ServerStart serviceStart = new ServerStart();
+            Console.WriteLine("CFG port: " + serviceStart.port);
+            Console.WriteLine("CFG root: " + RootCatalog);
             serviceStart.Run();
         }
 
         public ServerStart()
         {
-            _serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), 80); //65080
+            loadConfigFile();
+            _serverSocket = new TcpListener(IPAddress.Parse("127.0.0.1"), port); //65080
         }
 
         public void Run()
@@ -96,6 +101,40 @@ namespace TCPEchoServer
                 }
                 Thread.Sleep(100);
             }
+        }
+
+        public void loadConfigFile()
+        {
+            try
+            {
+                StreamReader sr = new StreamReader(new FileStream("config.cfg", FileMode.Open));
+
+                String line = "";
+                do
+                {
+                    line = sr.ReadLine();
+                    String[] splitted = line.Split(':');
+                    if (splitted[0].ToUpper() == "PORT")
+                    {
+                        port = Convert.ToInt32(splitted[1]);
+
+                    }
+                    else if (splitted[0].ToUpper() == "ROOT")
+                    {
+                        RootCatalog = splitted[1];
+                    }
+                    
+                } while (!sr.EndOfStream);
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("Config not found: " + e.Message);
+            }
+        }
+
+        public void saveConfigFile()
+        {
+            
         }
     }
 }
