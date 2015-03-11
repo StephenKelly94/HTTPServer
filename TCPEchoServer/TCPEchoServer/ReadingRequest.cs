@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace TCPEchoServer
                 Console.WriteLine(_httpRequest);
                 String[] lines = _httpRequest.Split(' ');
                 if(lines[0] == "GET")
-                    RequestPacket = new HTTPRequest(lines[0], lines[1]);
+                    RequestPacket = new HTTPRequest(lines[0], WebUtility.UrlDecode(lines[1]));
                 _httpRequest = sr.ReadLine();
             }
 

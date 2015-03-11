@@ -39,3 +39,4 @@ C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\obj
 C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.exe
 C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\bin\Debug\TCPEchoServer.pdb
 C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
+D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\TCPEchoServer\obj\Debug\TCPEchoServer.csprojResolveAssemblyReference.cache
