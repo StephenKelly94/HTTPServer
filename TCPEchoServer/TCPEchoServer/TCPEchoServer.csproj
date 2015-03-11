@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContentTypes.cs" />
+    <Compile Include="HTTPRequest.cs" />
+    <Compile Include="HTTPResponse.cs" />
     <Compile Include="ServerThread.cs" />
     <Compile Include="HandlingRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

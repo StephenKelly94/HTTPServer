@@ -5,3 +5,10 @@ D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\bin\Debug\TCPEchoServer.p
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.csprojResolveAssemblyReference.cache
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.dll
 D:\Mokslai\CODS_SODP_HTTP\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.pdb
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\bin\Debug\HTTPServerTest.dll
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\bin\Debug\HTTPServerTest.pdb
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\bin\Debug\TCPEchoServer.exe
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\bin\Debug\TCPEchoServer.pdb
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.csprojResolveAssemblyReference.cache
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.dll
+C:\ProgrammingWorkspace\C#\HTTPServer\HTTPServer\TCPEchoServer\HTTPServerTest\obj\Debug\HTTPServerTest.pdb

@@ -8,7 +8,6 @@ namespace TCPEchoServer
     public class ServerThread
     {
         private static int _newestClientNumber;
-        private const string RootCatalog = "../../../../RootFolder";
         public int ClientNumber;
 
         public ServerThread(TcpClient connection)
@@ -27,48 +26,21 @@ namespace TCPEchoServer
             StreamWriter sw = new StreamWriter(ns);
             sw.AutoFlush = true; // enable automatic flushing
 
-
-            String message = sr.ReadLine();
-            while (!string.IsNullOrEmpty(message))
+            ReadingRequest readingRequest = new ReadingRequest(sr);
+            Console.WriteLine("Client " + ClientNumber + ": " + readingRequest.toString());
+            Console.WriteLine("-----------------------------------------------");
+            if (readingRequest.RequestPacket != null)
             {
-                Console.WriteLine("Client " + ClientNumber + ": " + message);
-                String[] splitted = message.Split(' ');
-                if (splitted[0] == "GET")
-                {
-                    sendFile(splitted[1], sw);
-                }
-                message = sr.ReadLine();
+                HandlingRequest handlingRequest = new HandlingRequest();
+                HTTPResponse httpResponse = handlingRequest.HandleRequest(readingRequest.RequestPacket);
+
+                SendingResponse sendingResponse = new SendingResponse();
+                sendingResponse.SendResponse(sw, httpResponse);
             }
 
             ns.Close();
             ConnectionSocket.Close();
         }
 
-        private void sendFile(String fileName, StreamWriter sw)
-        {
-            try
-            {
-                FileStream fileStream = new FileStream(RootCatalog + fileName, FileMode.Open);
-                StreamReader fileStreamReader = new StreamReader(fileStream);
-                sw.Write("HTTP/1.0 200 OK\r\n");
-                sw.Write("Date: {0} \r\n", string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now));
-                ContentTypes contentTypes = new ContentTypes();
-                sw.Write("Content-Type: " + contentTypes.GetContentType(Path.GetExtension(fileName)) + "\r\n");
-                sw.Write("Content-Length: " + fileStream.Length + "\r\n\r\n");
-                fileStream.CopyTo(sw.BaseStream);
-                fileStreamReader.Close();
-                fileStream.Close();
-            }catch(FileNotFoundException e)
-            {
-                Console.WriteLine("File {0} not found", e.FileName);
-                sw.Write("HTTP/1.0 404 Not Found\r\n\r\n");
-                FileStream fileStream = new FileStream(RootCatalog + "/404.html", FileMode.Open);
-                StreamReader fileStreamReader = new StreamReader(fileStream);
-                fileStream.CopyTo(sw.BaseStream);
-                fileStreamReader.Close();
-                fileStream.Close();
-
-            }   
-        }
     }
 }

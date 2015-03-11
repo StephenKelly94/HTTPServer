@@ -14,6 +14,7 @@ namespace TCPEchoServer
         private readonly List<ServerThread> _echoServices = new List<ServerThread>();
         private readonly TcpListener _serverSocket;
         private bool _isRunning = true;
+        public const string RootCatalog = "../../../../RootFolder";
 
         public static void Main(string[] args)
         {
